@@ -8,7 +8,7 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 9.9312,   // Kochi default
+  lat: 9.9312, // Kochi default
   lng: 76.2673,
 };
 
@@ -17,7 +17,10 @@ function MapView({ destination }) {
   const [mapLoaded, setMapLoaded] = useState(false);
   const [error, setError] = useState(false);
 
-  const getRoute = (map) => {
+  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
+  // 🔥 MAIN ROUTE FUNCTION
+  const getRoute = () => {
     if (!destination || !window.google) return;
 
     const directionsService = new window.google.maps.DirectionsService();
@@ -26,21 +29,26 @@ function MapView({ destination }) {
       {
         origin: center,
         destination: destination,
-        travelMode: "DRIVING", // Changed to DRIVING for emergency response
+        travelMode: window.google.maps.TravelMode.WALKING, // 🚶 evacuation mode
       },
       (result, status) => {
         if (status === "OK") {
           setDirections(result);
           setError(false);
         } else {
-          console.error("Directions request failed:", status);
+          console.error("Directions failed:", status);
           setError(true);
         }
       }
     );
   };
 
-  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+  // 🔥 Recalculate when destination changes
+  useEffect(() => {
+    if (mapLoaded) {
+      getRoute();
+    }
+  }, [destination, mapLoaded]);
 
   if (!apiKey) {
     return (
@@ -68,7 +76,6 @@ function MapView({ destination }) {
         mapContainerStyle={containerStyle}
         center={center}
         zoom={14}
-        onLoad={getRoute}
         options={{
           styles: [
             {
@@ -81,14 +88,15 @@ function MapView({ destination }) {
           zoomControl: true,
         }}
       >
+        {/* 🔥 ROUTE */}
         {directions && (
           <DirectionsRenderer 
             directions={directions} 
             options={{
               polylineOptions: {
-                strokeColor: "#c241ff",
+                strokeColor: "#ef4444", // 🔴 emergency red
                 strokeWeight: 5,
-                strokeOpacity: 0.8,
+                strokeOpacity: 0.9,
               },
             }}
           />
