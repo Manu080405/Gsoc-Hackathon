@@ -1,0 +1,129 @@
+{
+  "building_name": "Grand Plaza Hotel",
+  "location": "Kochi, Kerala",
+  "total_floors": 5,
+
+  "floors": [
+    {
+      "floor_number": 1,
+      "zone": "Lobby & Reception",
+
+      "rooms": ["101", "102", "103", "104", "105"],
+
+      "resources": {
+        "fire_extinguishers": 4,
+        "fire_alarms": 2,
+        "aed": 1,
+        "first_aid_kits": 2,
+        "emergency_exits": ["Exit A", "Exit B"]
+      },
+
+      "staff": {
+        "security": [
+          { "id": "S1", "name": "Arjun" }
+        ],
+        "maintenance": [
+          { "id": "MT1", "name": "Kiran" }
+        ]
+      }
+    },
+
+    {
+      "floor_number": 2,
+      "zone": "Guest Rooms",
+
+      "rooms": ["201", "202", "203", "204", "205"],
+
+      "resources": {
+        "fire_extinguishers": 5,
+        "fire_alarms": 2,
+        "aed": 1,
+        "first_aid_kits": 2,
+        "emergency_exits": ["Exit C"]
+      },
+
+      "staff": {
+        "security": [
+          { "id": "S2", "name": "Rahul" }
+        ]
+      }
+    },
+
+    {
+      "floor_number": 3,
+      "zone": "Guest Rooms",
+
+      "rooms": ["301", "302", "303", "304", "305"],
+
+      "resources": {
+        "fire_extinguishers": 5,
+        "fire_alarms": 2,
+        "aed": 0,
+        "first_aid_kits": 2,
+        "emergency_exits": ["Exit D"]
+      },
+
+      "staff": {
+        "security": [
+          { "id": "S3", "name": "Vikram" }
+        ]
+      }
+    },
+
+    {
+      "floor_number": 4,
+      "zone": "VIP Suites",
+
+      "rooms": ["401", "402", "403", "404", "405"],
+
+      "resources": {
+        "fire_extinguishers": 6,
+        "fire_alarms": 3,
+        "aed": 1,
+        "first_aid_kits": 3,
+        "emergency_exits": ["Exit E"]
+      },
+
+      "staff": {
+        "security": [
+          { "id": "S4", "name": "Manoj" }
+        ]
+      }
+    },
+
+    {
+      "floor_number": 5,
+      "zone": "Conference Hall",
+
+      "rooms": ["501", "502"],
+
+      "resources": {
+        "fire_extinguishers": 3,
+        "fire_alarms": 2,
+        "aed": 1,
+        "first_aid_kits": 2,
+        "emergency_exits": ["Exit F"]
+      },
+
+      "staff": {
+        "security": [
+          { "id": "S5", "name": "Deepak" }
+        ]
+      }
+    }
+  ],
+
+  "global_staff": {
+    "medical": [
+      { "id": "M1", "name": "Dr. Anjali" },
+      { "id": "M2", "name": "Dr. Priya" }
+    ],
+    "fire_team": [
+      { "id": "F1", "name": "Rakesh" },
+      { "id": "F2", "name": "Suresh" }
+    ],
+    "management": [
+      { "id": "MG1", "name": "Hotel Manager" }
+    ]
+  }
+}

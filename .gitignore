@@ -1,0 +1,4 @@
+.env
+firebase/firebase_key.json
+backend/.env
+frontend/.env
