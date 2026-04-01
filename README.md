@@ -32,9 +32,9 @@ Attach screenshots in a `/proof` folder:
 ## Screenshots 
 Add project screenshots:
 
-![Screenshot1](./proof/ss1.jpeg)  
-![Screenshot2](./proof/ss2.jpeg)
-![Screenshot3](./proof/ss3.jpeg)
+![Screenshot1](./frontend/proof/Screenshot 2026-04-01 050002.png)  
+![Screenshot2](./frontend/proof/Screenshot 2026-04-01 050013.png)
+![Screenshot3](./frontend/proof/Screenshot 2026-04-01 050045.png)
 
 ---
 
@@ -43,6 +43,10 @@ Upload your demo video to Google Drive and paste the shareable link here (max 3 
 [Watch Demo](https://drive.google.com/file/d/1kkDJb10RCDSUhYIztc0YCLeS1w1cAe-Y/view?usp=drive_link)
 
 ---
+
+## For Additional Information
+
+https://github.com/Adithyan78/build-with-ai
 
 ## Installation Steps
 
