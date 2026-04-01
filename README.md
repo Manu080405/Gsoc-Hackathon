@@ -32,9 +32,9 @@ Attach screenshots in a `/proof` folder:
 ## Screenshots 
 Add project screenshots:
 
-![Screenshot1](./proof/ss1.jpeg)  
-![Screenshot2](./proof/ss2.jpeg)
-![Screenshot3](./proof/ss3.jpeg)
+![Screenshot1](./proof/ss1.png)  
+![Screenshot2](./proof/ss2.png)
+![Screenshot3](./proof/ss3.png)
 
 ---
 
